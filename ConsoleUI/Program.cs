@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SortLogic;
+using ArrayOperations;
 using System.Diagnostics;
 
 namespace ConsoleUI
@@ -22,16 +22,16 @@ namespace ConsoleUI
                 mas2[i] = rand.Next(1000);
             }
             stopWatch.Start();
-            QuickSort.Sort(mas);
+            SortOperations.Quicksort(mas);
             stopWatch.Stop();
-            TimeSpan quicksorttime = stopWatch.Elapsed;
+            TimeSpan quickSortTime = stopWatch.Elapsed;
             stopWatch.Restart();
             stopWatch.Start();
-            MergeSort.Sort(mas2);
+            SortOperations.MergeSort(mas2);
             stopWatch.Stop();
-            TimeSpan mergesorttime = stopWatch.Elapsed;
-            Console.WriteLine("Quick sort time " + quicksorttime.TotalMilliseconds +" milliseconds");
-            Console.WriteLine("Merge sort time " + mergesorttime.TotalMilliseconds +" milliseconds");
+            TimeSpan mergeSortTime = stopWatch.Elapsed;
+            Console.WriteLine("Quick sort time " + quickSortTime.TotalMilliseconds +" milliseconds");
+            Console.WriteLine("Merge sort time " + mergeSortTime.TotalMilliseconds +" milliseconds");
             Console.ReadKey();
         }
     }
