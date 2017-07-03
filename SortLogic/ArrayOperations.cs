@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ArrayOperations
+namespace SortLogic
 {
     /// <summary>
     /// implements merge and quick sort algorithms for 1 dimensional array of integers
     /// </summary>
-    public static class SortOperations
+    public static class ArrayOperations
     {
         #region public methods
         /// <summary>

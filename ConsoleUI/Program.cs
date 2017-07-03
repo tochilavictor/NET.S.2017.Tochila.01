@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ArrayOperations;
 using System.Diagnostics;
+using SortLogic;
 
 namespace ConsoleUI
 {
@@ -12,6 +12,9 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            int num2 = -15;
+            string n1 = Convert.ToString(num2, 2);
+            Console.WriteLine(n1);
             Stopwatch stopWatch = new Stopwatch();
             int[] mas = new int[10000];
             int[] mas2 = new int[10000];
@@ -22,12 +25,12 @@ namespace ConsoleUI
                 mas2[i] = rand.Next(1000);
             }
             stopWatch.Start();
-            SortOperations.Quicksort(mas);
+            ArrayOperations.Quicksort(mas);
             stopWatch.Stop();
             TimeSpan quickSortTime = stopWatch.Elapsed;
             stopWatch.Restart();
             stopWatch.Start();
-            SortOperations.MergeSort(mas2);
+            ArrayOperations.MergeSort(mas2);
             stopWatch.Stop();
             TimeSpan mergeSortTime = stopWatch.Elapsed;
             Console.WriteLine("Quick sort time " + quickSortTime.TotalMilliseconds +" milliseconds");
